@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1008015099393",
+    "firebase_url": "https://independence74.firebaseio.com",
+    "project_id": "independence74",
+    "storage_bucket": "independence74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008015099393:android:54012d3d39f9503a79e200",
+        "android_client_info": {
+          "package_name": "com.memory1.independence74"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008015099393-9u4lqtpqpc79gt8of2f7vmh1nbkicodk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.memory1.independence74",
+            "certificate_hash": "3858aec1dede1a5f9d2cf2d4ae17f45b834de101"
+          }
+        },
+        {
+          "client_id": "1008015099393-mfudsputvfengdp8vtn39r2lkv6epdci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRoNNFSgN6dDVwp49DxbQwc6eTX5pfcLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008015099393-mfudsputvfengdp8vtn39r2lkv6epdci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

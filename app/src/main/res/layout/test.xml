@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_main"
+    android:background="#99000000">
+
+
+    <Button
+        android:id="@+id/map_inde_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="독립운동가" />
+
+    <Button
+        android:id="@+id/map_wianboo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/map_inde_btn"
+        android:text="위안부 피해자"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/map_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+        android:layout_below="@id/map_wianboo_btn"/>
+
+</RelativeLayout>

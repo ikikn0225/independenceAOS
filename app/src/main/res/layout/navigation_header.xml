@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="225dp"
+    android:background="@color/navi"
+    android:id="@+id/header">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/navi_user_image"
+        android:layout_width="98dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/wianboo_girl_main"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/navi_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#fff"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/navi_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게스트"
+        android:textColor="#fff"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        />
+
+</LinearLayout>

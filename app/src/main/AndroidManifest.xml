@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.memory1.independence74">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 알림 서비스를 위한 service -->
+        <service
+            android:name="com.memory1.independence74.FireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_image" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+
+
+        <!-- 인스턴스ID가 자동으로 생성되는 것을 방지하기 위한 메타데이터 -->
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+
+
+
+        <!-- 사진 촬영을 위한 provide -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.memory1.independence74.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="API키 숨김(API 7 체크)" />
+
+        <activity android:name="com.memory1.independence74.LoadingPage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.IndependentMain"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.WianbooMain"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.RegisterAgree"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.RegisterServiceAgree"
+            android:parentActivityName="com.memory1.independence74.RegisterAgree"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.Register"
+            android:parentActivityName="com.memory1.independence74.Login"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.memory1.independence74.Login"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.memory1.independence74.UserSetting"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.UserInfoChange"
+            android:parentActivityName="com.memory1.independence74.UserSetting"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.IndeDetail"
+            android:parentActivityName="com.memory1.independence74.IndependentMain"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.Map"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.MapListDialog"
+            android:theme="@style/AppTheme.CustomTheme"
+            android:parentActivityName="com.memory1.independence74.Map"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.IndependentMain2"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.MyIndeStory"
+            android:parentActivityName="com.memory1.independence74.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.memory1.independence74.MyIndeStory2"
+            android:parentActivityName="com.memory1.independence74.MyIndeStory"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

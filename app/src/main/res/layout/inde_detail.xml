@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/inde_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="성함"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/inde_detail_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="과업"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#808080"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/inde_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:src="@drawable/inde_main"
+            android:background="#2d2d2d"/>
+
+        <ImageView
+            android:id="@+id/inde_detail_image2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:src="@drawable/inde_main"
+            android:background="#2d2d2d"/>
+
+        <ImageView
+            android:id="@+id/inde_detail_image3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:src="@drawable/inde_main"
+            android:background="#2d2d2d"/>
+
+        <TextView
+            android:id="@+id/inde_detail_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="독립 운동가분들의 태어난 배경부터 어떠한 삶을 살아왔는지에 대한 역사를 적는 공간"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+</ScrollView>

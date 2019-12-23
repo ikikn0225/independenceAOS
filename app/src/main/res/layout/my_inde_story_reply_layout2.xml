@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/reply_recyclerview">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mystory_reply_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inde_main"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mystroy_reply_user_name"
+            android:layout_width="59dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="작성자 이름"
+            android:textColor="#000"
+            android:textSize="12dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="@id/mystory_reply_user_image"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/mystory_reply_user_text"
+            android:layout_width="300dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="작성 글"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="@id/mystory_reply_user_image"
+            app:layout_constraintTop_toBottomOf="@id/mystroy_reply_user_name"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C0C0C0"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/mystory_reply_user_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reply_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reply_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reply_recyclerview"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/mystory_reply_btn"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="게시"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mystory_logined_user_reply" />
+
+        <EditText
+            android:id="@+id/mystory_logined_user_reply"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="댓글 달기..."
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/mystory_logined_user_image" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mystory_logined_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/inde_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    >
+
+    <ImageView
+        android:id="@+id/inde_main"
+        android:layout_width="138dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inde_main"
+        app:layout_constraintEnd_toStartOf="@+id/wianboo_girl_main"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/wianboo_girl_main"
+        android:layout_width="138dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:paddingTop="100dp"
+        android:src="@drawable/wianboo_girl_main"
+        app:layout_constraintEnd_toStartOf="@+id/inde_map_main"
+        app:layout_constraintTop_toTopOf="@+id/black_screen" />
+
+    <ImageView
+        android:id="@+id/inde_map_main"
+        android:layout_width="138dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inde_map_main"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/black_screen" />
+
+    <ImageView
+        android:id="@+id/black_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="348dp"
+        android:layout_marginLeft="10dp"
+        android:text="독립 운동가"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="@+id/inde_main"
+        app:layout_constraintTop_toTopOf="@+id/inde_main"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="4dp"
+        android:text="위안부 피해자"
+        android:textColor="#fff"
+        android:textSize="23dp"
+        app:layout_constraintLeft_toLeftOf="@+id/wianboo_girl_main"
+        app:layout_constraintTop_toTopOf="@+id/wianboo_girl_main"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="20dp"
+        android:text="독립 지도"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="@+id/inde_map_main"
+        app:layout_constraintTop_toTopOf="@+id/inde_map_main"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

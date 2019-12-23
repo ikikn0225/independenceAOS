@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navi_inde" android:title="독립 운동가"></item>
+    <item android:id="@+id/navi_wianboo" android:title="위안부 피해자"></item>
+    <item android:id="@+id/navi_map" android:title="독립 지도"></item>
+    <item android:id="@+id/navi_my_story" android:title="나의 독립 이야기"></item>
+
+    <item android:title="">
+    <menu>
+        <item android:id="@+id/navi_logout" android:title="로그아웃" android:icon="@drawable/ic_lock_open"></item>
+        <item android:id="@+id/navi_user_setting" android:title="사용자 설정" android:icon="@drawable/ic_person_add"></item>
+    </menu>
+    </item>
+</menu>
